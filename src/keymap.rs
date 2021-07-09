@@ -2,7 +2,7 @@ use std::fmt;
 use std::str::FromStr;
 
 #[derive(Debug, PartialEq, Clone)]
-/// A list of supported keys that we can query from the OS. Outside of mod.
+/// A list of supported keys that we can device_state from the OS. Outside of mod.
 pub enum Keycode {
     Key0,
     Key1,

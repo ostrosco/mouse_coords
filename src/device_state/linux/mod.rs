@@ -2,7 +2,7 @@ extern crate input_event_codes as kernel_key;
 extern crate x11;
 
 use keymap::Keycode;
-use linux::x11::xlib;
+use self::x11::xlib;
 use mouse_state::MouseState;
 use std::os::raw::c_char;
 use std::ptr;
@@ -58,7 +58,7 @@ impl DeviceState {
         let button4pressed = mask_return & xlib::Button4Mask > 0;
         let button5pressed = mask_return & xlib::Button5Mask > 0;
 
-        // Use 1-based indexing here so people can just query the button
+        // Use 1-based indexing here so people can just device_state the button
         // number they're interested in directly.
         let button_pressed = vec![
             false,
